@@ -1,4 +1,7 @@
-document.write(`Bienvenidos a, 'Restaurante Continental <br><br>
+//Practica sección I
+
+//alerta de menu del restaurante
+alert(`Bienvenidos a, Restaurante Continental <br><br>
 
         Carta de precios platos continetales: <br><br>
         
@@ -8,9 +11,8 @@ document.write(`Bienvenidos a, 'Restaurante Continental <br><br>
         - Tacos al pastor con salsa ---- $10 <br>
         - Pasta Napolitana ------------- $10 <br>
         - Pabellon Criollo ------------- $15 <br><br><br>`);
-        
-alert('Consutar recomendacion de platos por favor ');
 
+//Creación de variables e introdución de datos desde el teclado
 let persona1 = prompt('Ingrese nombre: ');
 let dineroP1 = prompt(`${persona1} ¿Cuanto dinero tienes?`);
 let vueltoP1;
@@ -23,7 +25,7 @@ let persona3 = prompt('Ingrese nombre: ');
 let dineroP3 = prompt(`${persona3} ¿Cuanto dinero tienes?`);
 let vueltoP3;
 
-
+//Condiciones para impresones de los mensajes persona1
 if (dineroP1 >= 15) {
     document.write(`${persona1} posees ${dineroP1}$ el plato mas caro que puedes comprar: <br>
                     Pabellon Criollo <br>`)
@@ -51,7 +53,7 @@ if (dineroP1 >= 15) {
 document.write(`Vuelto: ${vueltoP1}$ <br><br>`);
 
 
-
+//Condiciones para impresones de los mensajes persona2
 if (dineroP2 >= 15) {
     document.write(`${persona2} posees ${dineroP2}$ el plato mas caro que puedes comprar: <br>
                     Pabellon Criollo <br>`)
@@ -78,7 +80,7 @@ if (dineroP2 >= 15) {
 }
 document.write(`Vuelto: ${vueltoP2}$ <br>`);
 
-
+//Condiciones para impresones de los mensajes persona3
 if (dineroP3 >= 15) {
     document.write(`${persona3} posees ${dineroP3}$ el plato mas caro que puedes comprar: <br>
                     Pabellon Criollo <br>`)
@@ -106,14 +108,59 @@ if (dineroP3 >= 15) {
 document.write(`Vuelto: ${vueltoP3}$ <br><br><br><br>`);
 
 
+//Solución Recomendada
+
+// Estructura de datos para almacenar información de platos y precios
+/* const menu = [
+    { name: 'Pabellon Criollo', price: 15 },
+    { name: 'Pasta Napolitana', price: 10 },
+    { name: 'Tacos al pastor con salsa', price: 10 },
+    { name: 'Hamburguesa Americana', price: 8 },
+    { name: 'Bandeja paisa', price: 7 },
+    { name: 'Arepa criolla de carne mechada', price: 4 },
+  ];
+  
+  // Función para determinar el plato más caro que una persona puede comprar
+  function determinarPlato(persona, dinero) {
+    let platoComprado = null;
+    let vuelto = 0;
+  
+    for (let i = 0; i < menu.length; i++) {
+      if (dinero >= menu[i].price) {
+        platoComprado = menu[i].name;
+        vuelto = dinero - menu[i].price;
+        break;
+      }
+    }
+  
+    if (platoComprado) {
+      document.write(`${persona} posees ${dinero}$ el plato más caro que puedes comprar: <br>${platoComprado} <br>`);
+    } else {
+      document.write(`${persona} posees ${dinero}$ No posees dinero suficiente <br>`);
+    }
+  
+    document.write(`Vuelto: ${vuelto}$ <br><br>`);
+  }
+  
+  // Llamadas a la función determinarPlato para cada persona
+  determinarPlato(persona1, dineroP1);
+  determinarPlato(persona2, dineroP2);
+  determinarPlato(persona3, dineroP3); */
 
 
 
+
+//Ejercicio boletos de loteria
+
+//Crear variable
 let boletos;
+
+//Impresión de mensaje en pantalla
 document.write(`Triple Gordo Venta de Loteria <br><br>
 
         Precio del Boleto 1.5$ <br><br>`);
 
+//Condiciones para resultado de variable
 if (vueltoP1 >= 7.5) {
     boletos = 5;
 } else if (vueltoP1 >= 6) {
@@ -128,14 +175,45 @@ if (vueltoP1 >= 7.5) {
     boletos = 0;
 }
 
-
-document.write(`Con los ${vueltoP1}$ de vuelto ${persona1} puedes comprar ${boletos} Boletos`)
-
-
+//Impresión de mensaje de resultado en pantalla
+document.write(`Con los ${vueltoP1}$ de vuelto ${persona1} puedes comprar ${boletos} Boletos`);
 
 
+//Codigo Recomendado
+/* const precioBoleto = 1.5;
+
+//función para ejecutar el codigo de calculos de los boletos
+const calcularCantidadBoletos = (vuelto) => {
+  if (vuelto >= 7.5) {
+    return 5;
+  } else if (vuelto >= 6) {
+    return 4;
+  } else if (vuelto >= 4.5) {
+    return 3;
+  } else if (vuelto > 3) {
+    return 2;
+  } else if (vuelto > 1.5) {
+    return 1;
+  } else {
+    return 0;
+  }
+};
+
+const vueltoP1 = 10; // Ejemplo de valor para el vuelto de la persona 1
+
+//Llamada de la función
+const boletosP1 = calcularCantidadBoletos(vueltoP1);
+
+//Mesaje de resultado en pantalla
+document.write(`Triple Gordo Venta de Loteria <br><br>
+  Precio del Boleto ${precioBoleto}$ <br><br>
+  Con los ${vueltoP1}$ de vuelto ${persona1} puedes comprar ${boletosP1} Boletos`); */
+
+
+//creación de varible para condición
 let resultado = 2;
 
+//Condiciones para el resultado del detector
 if (resultado == 1) {
     console.log('Verdadero, no se da descarga electrica')
 } else if (resultado == 2) {

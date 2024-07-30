@@ -95,7 +95,9 @@ class Telefono {
 
 //Clase hija de telefono, obtiene las caracteristicas de su clase padre telefono mas las suyas propias
 class TelefonoGammaAlta extends Telefono {
+    //constructor de la clase donde se inicializan las variables
     constructor(marca, color, peso, resolucionP, camara, ram, reconocimientoF, camaraExtra){
+        //se usa super para traer y usar las variables desde la clase madre
         super(marca, color, peso, resolucionP, camara, ram);
         this.reconocimientoF = reconocimientoF;
         this.camaraExtra = camaraExtra;
